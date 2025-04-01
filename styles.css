@@ -331,9 +331,10 @@ footer{
     .corporate-wellness img{
         height: 200px;
         width: 50%;
+       
     }
     .contact-form{
-        padding-top: 90vh;
+        margin-top: 800px;
     }
     footer{
       display: block;
