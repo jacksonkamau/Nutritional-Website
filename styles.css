@@ -5,9 +5,9 @@ html {
     background-color: black;
     padding: 16px 7px;
     position: fixed;
-    top: 0;
+    z-index:1000;
     width: 100%;
-    
+    top: 0;
 }
 
 .Nav-bar ul{
@@ -71,16 +71,19 @@ html {
 .button-container{
     text-align: center;
     padding: 20px 10px;
+   
 }
 .button-container button{
     padding: 19px 30px;
     cursor: pointer;
     background-color: aqua;
     border-radius: 30px;
+    box-shadow:0 1px 3px black;
     transition: 0.3s ease-in-out;
 }
 .button-container button:hover{
  background-color: orange;
+ color: white;
 }
 
 .Home-page p{
@@ -88,9 +91,27 @@ html {
     padding-bottom: 10px;
     color: black;
     font-size: 20px;
+    
 }
 
 /*About Us */
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .About-Us-Page {
+    width: 100%;
+    height: 500px;
+    background-color: white;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    animation: float 2s ease-in-out infinite;
+  }
+
+
 .About-Us-Page p{
     text-align: center;
     font-size: 24px;
@@ -116,52 +137,57 @@ html {
 }
 
 /*Services Page*/
+.services-page{
+    height: 700px;
+    width: 100%;
+}
 .services-page h1{
     text-align: center;
 }
 
 .services-page-container{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     gap: 10px;
+    
 }
 .meal-planning img{
     height: 400px;
     width: 400px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgb(172, 172, 238);
+    
 }
 .weight-management img{
     height: 400px;
     width: 400px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgb(172, 172, 238);
 }
 .chronic-disease-management img{
     height: 400px;
     width: 400px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgb(172, 172, 238);
 }
 .corporate-wellness img{
     height: 400px;
     width: 400px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgb(172, 172, 238);
 }
 
+/* contact form */
 .contact-form {
     max-width: 500px;
-    margin: 50px auto;
-    padding: 20px;
+    margin: 50px;
+    padding-top: 20px;
     background: #f9f9f9;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(197, 79, 79, 0.1);
 }
 
 .contact-form form {
@@ -205,7 +231,7 @@ html {
 }
 
 footer{
-    background-color: red;
+    background-color: black;
     display: flex;
     padding: 50px 5px;
     justify-content: center;
@@ -240,5 +266,77 @@ footer{
 
   .usefull-links li a:hover{
     color: orange;
+}
+
+@media (max-width: 480px) {
+    .Nav-bar{
+        background-color: black;
+        padding: 16px 7px;
+        position: fixed;
+        z-index:1000;
+        width: 100%;
+        top: 0;
+        padding-bottom: 1px;
+ 
+    }
+      .Nav-bar ul{
+        display: block;
+       }
+      .About-Us-Page {
+        width: 100%;
+        height: 500px;
+        background-color: white;
+        box-shadow: none !important;
+      }
+       .About-Us-Page-container{
+        display: block;
+       }
+
+       .About-Us-Page-container img{
+        width: 50%;
+        height: 200px;
+        object-fit: cover;
+        padding-top: 7px;
+        margin-left: 100px;
+    }
+    
+    .About-Us-Page-container p{
+       font-size: 16px;
+       padding-top: 10px;
+       line-height: 18px;
+    }
+
+    .services-page h1{
+      padding-top: 130px;
+    }
+    .services-page-container{
+       display: block;
+       align-items: center;
+    }
+    .meal-planning img{
+     height: 200px;
+     width: 50%;
+    }
+
+    .weight-management img{
+        height: 200px;
+        width: 50%;
+    }
+
+    .chronic-disease-management img{
+        height: 200px;
+        width: 50%;
+    }
+
+    .corporate-wellness img{
+        height: 200px;
+        width: 50%;
+    }
+    .contact-form{
+        padding-top: 90vh;
+    }
+    footer{
+      display: block;
+    }
 }
 
